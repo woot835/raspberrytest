@@ -4,5 +4,9 @@
 
 This git is made by me, Meelis.
 
-Its current contents contain blink.py and nupp.py, which are both python scrips ment to make a LED connected to a RaspberryPi blink.
+Its current contents contain python scrips for blinking lights
 
+rgb.py uses these pins:
+Red - 10
+Blue - 27
+Green - 22
