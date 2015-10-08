@@ -9,7 +9,7 @@
 
 import argparse
 import RPi.GPIO as GPIO
-
+from time import sleep
 # Get RGB colors from command line arguments.
 parser = argparse.ArgumentParser(description = 'Add a little color to your life.')
 parser.add_argument('color', metavar='color', type=str, nargs=1,
@@ -36,8 +36,22 @@ GPIO.output(blue, 0)
 
 # Set individual colors.
 if args.color[0] == 'red':
-  GPIO.output(red, 1)
+  while True:
+    GPIO.output(red, True)
+    sleep(1)
+    GPIO.output(red, False)
+    sleep(1)
 elif args.color[0] == 'green':
-  GPIO.output(green, 1)
+   while True:
+    GPIO.output(green, True)
+    sleep(1)
+    GPIO.output(green, False)
+    sleep(1)
 elif args.color[0] == 'blue':
-  GPIO.output(blue, 1)
+   while True:
+    GPIO.output(blue, True)
+    sleep(1)
+    GPIO.output(blue, False)
+    sleep(1)
+
+
